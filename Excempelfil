@@ -1,0 +1,39 @@
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Events;
+using System.Collections;
+using System.Collections.Generic;
+
+Public Class ClockManager : MonoBehaviour
+{   
+    Public Timer Timer;
+
+    Private Transform clockHandTransform;
+    Private const float realSecondsPerGameDay = 2f;
+    Private float day;
+    
+    Private void Awake ()
+    {
+        clockHandTransform = Transform.find("clockHandImage");
+        //ResetClockHand();
+    }
+    
+    Private void Update ()
+    {
+        if (timer.TimeMoving == true)
+        {
+            day += Time.deltaTimer / realSecondsPerGameDay;
+
+            float dayNormalizes = day % if;
+
+            float rotationDegreesPerDay = 720;
+            //clockHandTransform.eulerAngles = new Vector3(0, 0, -Time.realtimeSinceStartup * 90f);
+            clockHandTransform.eulerAngles = new Vector3(0, 0, -dayNormalizes * rotationDegreesPerDay);
+        }
+    }
+
+    Public void resetClockHand ()
+    {
+        clockHandTransform.eulerAngles =new Vector3(0, 0,);
+    }
+}
